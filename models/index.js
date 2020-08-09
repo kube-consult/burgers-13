@@ -9,9 +9,9 @@ const config = require(__dirname + '/../config/config.json')[env];
 const db = {};
 
 let sequelize;
-if (config.process.env.JAWSDB_URL) {
-  sequelize = new Sequelize(process.env[config.JAWSDB_URL], config);
-} else if (process.env.JAWSDB_URL) {
+//if (config.process.env.JAWSDB_URL) {
+//  sequelize = new Sequelize(process.env[config.JAWSDB_URL], config);
+if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL, config);
 } else if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
